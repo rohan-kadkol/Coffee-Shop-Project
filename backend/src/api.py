@@ -169,7 +169,8 @@ def delete_drink(payload, drink_id):
             'success': True,
             'delete': drink_id
         })
-    except:
+    except Exception as e:
+        print(e)
         abort(422)
 
 
